@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="gerador">
+        
+        <!-- Exibição da Senha Gerada -->
+        <div class="conteudo-senha">
+            <label for="campo-senha">Senha</label>
+            <input name="senha" type="text" id="campo-senha" readonly>
+        </div>
+
+        <h3 class="gerador__titulo-secao">Personalize sua senha</h3>
+
+        <!-- Seção 1: Número de caracteres -->
+        <div class="parametro-senha">
+            <h4 class="parametro-senha__titulo">Número de caracteres</h4>
+            <div class="parametro-senha-botoes">
+                <button class="parametro-senha__botao">-</button>
+                <p class="parametro-senha__texto">12</p>
+                <button class="parametro-senha__botao">+</button>
+            </div>
+        </div>  
+
+        <!-- Seção 2: Características da senha -->
+        <div class="parametro-senha">
+            <h4 class="parametro-senha__titulo">Características da senha</h4>
+            <div class="parametro-senha-checkbox-grupo">
+                <div class="parametro-senha-checkbox">
+                    <input name="maiusculo" id="maiusculo" type="checkbox" class="checkbox" checked>
+                    <label for="maiusculo">Letras maiúsculas</label>
+                </div>
+                <div class="parametro-senha-checkbox">
+                    <input name="minusculo" id="minusculo" type="checkbox" class="checkbox">
+                    <label for="minusculo">Letras minúsculas</label>
+                </div>
+                <div class="parametro-senha-checkbox">
+                    <input name="numeros" id="numeros" type="checkbox" class="checkbox">
+                    <label for="numeros">Números</label>
+                </div>
+                <div class="parametro-senha-checkbox">
+                    <input name="simbolos" id="simbolos" type="checkbox" class="checkbox">
+                    <label for="simbolos">Símbolos</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção 3: Força da senha -->
+        <div class="parametro-senha">
+            <h4 class="parametro-senha__titulo">Força da senha</h4>
+            <div class="barra"></div>
+            <div class="forca fraca"></div>
+            <div class="parametro-senha-textos">
+                <p>Fraca</p>
+                <p>Média</p>
+                <p>Forte</p>
+            </div>
+            <!-- Exibição da Entropia -->
+            <p class="entropia"></p>
+        </div>
+
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
